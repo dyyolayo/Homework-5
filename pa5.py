@@ -18,8 +18,13 @@ def gcd(inta,intb):
         return gcd(inta, intb%inta)
 
 def remove_pairs(direct):
-    """remove pairs of directions which undo each other"""
-    ret = direct.split
-    return ret
+    """Remove pairs of directions which undo each other"""
+    
+    pairs = ["EW", "WE", "NS", "SN"] 
+    
+    for a in range(len(direct)-1):
+        if (direct[a:a+2]) in pairs:
+            new = direct[:a] + direct[a+2:]
+            return new
 
-print(remove_pairs("EEWWNWS"))
+    return direct
