@@ -7,6 +7,7 @@ Created on Wed May  8 18:23:10 2024
 """
 
 def gcd(inta,intb):
+    """function created to take the greatest common divisor of two integers"""
     if inta == 0:
         return intb
     if intb == 0:
@@ -15,6 +16,10 @@ def gcd(inta,intb):
         return gcd(intb, inta%intb)
     if intb >= inta:
         return gcd(inta, intb%inta)
-    
-gcd(5,21)
 
+def remove_pairs(direct):
+    """remove pairs of directions which undo each other"""
+    ret = direct.split
+    return ret
+
+print(remove_pairs("EEWWNWS"))
