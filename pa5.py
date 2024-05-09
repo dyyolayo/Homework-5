@@ -37,7 +37,7 @@ def bisection_root(func, x1, x2):
         raise ValueError("Initial guesses do not bracket the root.")
 
     # Define the tolerance for y-value close to zero
-    tolerance = 0.001
+    tolerance = 10**(-7)
 
     # Loop until the y-value of one of the x-values is close to zero
     while True:
